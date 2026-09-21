@@ -3,11 +3,90 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #eef4ee;
+  background: linear-gradient(180deg, #eef4ee 0%, #f7faf7 100%);
   color: #1b2a2f;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+}
+
+.newsletter-section {
+  margin-top: 40px;
+}
+
+.newsletter-card {
+  background-color: #ffffff;
+  border: 1px solid #d9e6dd;
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-card h2 {
+  color: #0b2d4f;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.newsletter-card p {
+  color: #506a67;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 1px solid #bfd9d0;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.form-control:focus {
+  border-color: #1b8f6b;
+  box-shadow: 0 0 0 0.2rem rgba(27, 143, 107, 0.15);
+}
+
+.btn-primary {
+  background-color: #0a4f63;
+  border-color: #0a4f63;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0b2d4f;
+  border-color: #0b2d4f;
+}
+
+.site-footer {
+  background: #0b2d4f;
+  color: #eaf6ed;
+  padding: 28px 0;
+  margin-top: 40px;
+}
+
+.footer-copy {
+  margin: 0;
+  color: #eaf6ed;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #eaf6ed;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  text-decoration: underline;
 }
 
 html {
@@ -82,6 +161,7 @@ header p {
 }
 
 section {
+  direction: ltr;
   max-width: 1180px;
   margin: 30px auto 0 auto;
   padding: 20px;
@@ -93,42 +173,46 @@ section {
 
 section:not(.container) div {
   flex: 1 1 220px;
-  max-width: 280px;
+  max-width: 300px;
   min-height: 0px;
   box-sizing: border-box;
   margin: 0 auto;
   background-color: #ffffff;
   border: 1px solid #d9e6dd;
-  border-radius: 14px;
-  padding: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid #1b8f6b;
+  border-radius: 18px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 6px 18px rgba(10, 79, 99, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 section:not(.container) div:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 16px 28px rgba(10, 79, 99, 0.12);
+  border-color: #1b8f6b;
 }
 
 section:not(.container) h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #1b8f6b;
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
 section:not(.container) h3 {
   font-size: 1.2rem;
   color: #173f47;
   margin: 0 0 12px 0;
+  font-weight: 600;
 }
 
 section:not(.container) img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  border-radius: 10px;
+  margin-bottom: 14px;
 }
 
 section:not(.container) p {
