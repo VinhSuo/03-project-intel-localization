@@ -9,9 +9,43 @@ body {
   padding: 0;
   line-height: 1.6;
 }
-html{
+
+html {
   overflow-x: hidden;
   max-width: 100%;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #d9e6dd;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h2 {
+  font-size: 1.8rem;
+  color: #1b8f6b;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #506a67;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.feature-card .btn {
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+section.container {
+  display: block;
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  padding: 20px;
 }
 
 header {
@@ -57,7 +91,7 @@ section {
   gap: 20px;
 }
 
-section div {
+section:not(.container) div {
   flex: 1 1 220px;
   max-width: 280px;
   min-height: 0px;
@@ -66,28 +100,29 @@ section div {
   background-color: #ffffff;
   border: 1px solid #d9e6dd;
   border-radius: 14px;
-  padding: 10px;  box-sizing: border-box;  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section div:hover {
+section:not(.container) div:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
 }
 
-section h2 {
+section:not(.container) h2 {
   font-size: 2rem;
   color: #1b8f6b;
   margin: 0 0 8px 0;
 }
 
-section h3 {
+section:not(.container) h3 {
   font-size: 1.2rem;
   color: #173f47;
   margin: 0 0 12px 0;
 }
 
-section img {
+section:not(.container) img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -96,7 +131,7 @@ section img {
   margin-bottom: 12px;
 }
 
-section p {
+section:not(.container) p {
   color: #506a67;
   font-size: 0.96rem;
   line-height: 1.7;
