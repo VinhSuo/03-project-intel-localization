@@ -235,13 +235,31 @@ body > p {
 @media screen and (max-width: 768px) {
   section {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  section div {
-    width: min(100%, 420px);
+  section:not(.container) div {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
     min-height: auto;
     box-sizing: border-box;
+  }
+
+  section:not(.container) img {
+    height: 220px;
+  }
+
+  .newsletter-card,
+  .feature-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 
   header {
